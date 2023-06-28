@@ -11,8 +11,8 @@ dia = []
 for d in dIn:
     dia.append(d*25.4/1000)
 # print(dia)
-GPM = [11,11,11,11,11,9,8,5,2,2,2,3,3,1,5,3,2]
-# GPM = [3,3,3,3,3,3,2,2,2,2,2,0,0,1,0,0,0]
+# GPM = [11,11,11,11,11,9,8,5,2,2,2,3,3,1,5,3,2]
+GPM = [3,3,3,3,3,3,2,2,2,2,2,0,0,1,0,0,0]
 flowrate = []
 for rate in GPM:
     flowrate.append(rate * 6.309E-5)
@@ -38,13 +38,14 @@ for i in range(len(velocity)):
         f.append(0)
         Klosses.append(0)
         heads.append(0)
-heads[0] = heads[0] + lengths[0]
-heads[10] = heads[10] + lengths[10]
+heads[0] = heads[0] 
+heads[10] = heads[10] 
 # print(f)
 # print(Klosses)
 # print(heads)
-print(velocity[10]**2 / 2 / 9.81)
+# print(velocity[10]**2 / 2 / 9.81)
 headstotal = 0
-for head in heads: 
-    headstotal += head
+for i in range(len(heads)): 
+    if i<2:
+        headstotal += heads[i]
 # print(headstotal)

@@ -6,5 +6,6 @@ headstotal = 0
 for i in range(len(velocity)):
     head.append(fluids.core.head_from_K(K = Kvalues[i],V = velocity[i]))
     print(i+1, ": ", head[i])
-    headstotal += head[i]
+    if i == 0:
+        headstotal += head[i]
 print(headstotal)
